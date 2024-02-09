@@ -1,0 +1,28 @@
+<mat-card class="mt20 mr20 ml20" style="width:1000px" *ngFor="let q of quizzes">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{q.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-subtitle style="margin-left: 10px; margin-bottom: 10px;">{{q.category?.title}}</mat-card-subtitle>
+    <mat-card-content>{{q.description}}</mat-card-content>
+    <mat-card-content>
+        
+      <mat-card >
+        <div style="margin-top:50px;margin-bottom:30px;width: 100%; display: flex; justify-content: space-evenly;">
+        <button  routerLink="/admin/add-quiz" mat-raised-button color="primary" style="width: 150px;margin-left: 7px ;margin-right: 7px; " class="action_btn">Attempts</button>
+        <button   mat-raised-button color="primary" style="width: 150px; margin-left:7px;margin-right: 7px;" class="action_btn">maxMarks:{{q.maxMarks}}</button>
+        <button  
+        [routerLink]="'/admin/view-questions/' + q.qid + '/' + q.title"
+        mat-raised-button color="primary" style="width: 150px;margin-left:7px;margin-right: 7px;" class="action_btn">Questions:{{q.noOfQuestions}}</button>
+        <button  [routerLink]="'/admin/quiz/'+q.qid" mat-raised-button color="primary" style="width: 150px;margin-left:7px;margin-right: 5px;" class="action_btn">UPDATE</button>
+        <button   mat-raised-button color="primary" style="width: 150px;margin-left:7px;" class="action_btn" name='qId' (click)="deleteQuiz(q.qid)">Delete</button>
+
+    </div>
+      </mat-card>
+    
+    </mat-card-content>
+  </mat-card>
+  <div class="container text-center mt20">
+    <button routerLink="/admin/add-quiz" mat-raised-button color="primary">Add Quiz</button>
+  </div>
+  

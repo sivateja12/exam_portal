@@ -1,0 +1,44 @@
+<div class="bottstarp-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+                        <h2>Read the instructions Carefully</h2>
+                    </mat-card-header>
+                    <mat-card-content *ngIf="quiz">
+                        <h1 style="margin-top: 10;">{{quiz.title}}</h1>
+                        {{quiz.description}}
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Intstructor</h1>
+                        <ul>
+                            <li>This quiz is only for practice purpose.</li>
+                            <li>This quiz has  {{quiz.noOfQuestions*2}} minutes time limit.</li>
+                            <li>You can attemp this quiz any number of times.</li>
+                            <li>There are {{quiz.noOfQuestions}} questions.</li>
+                            <li>Each quetion carries {{quiz.maxMarks/quiz.noOfQuestions}} marks.</li>
+                            <li>All Questions are MCQ of type.</li>
+
+
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click <b>Start Quiz</b> button to start the quiz</li>
+                            <li>The time will start the moment you click the Start Test button.</li>
+                            <li>You can not resume this quiz, if interrupted due to any reason.</li>
+                            <li>Scroll down to move to next question.</li>
+                            <li>Click on Submit Test button on completion of the quiz.</li>
+                            <li>Report of the test is automatically generated in the form of PDF copy</li>
+                          </ul>
+                    </mat-card-content>
+                    <mat-card-actions style="justify-content: center;">
+                        <button (click)="startQuiz()" mat-button color="warn" >Start Quiz</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

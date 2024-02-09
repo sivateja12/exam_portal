@@ -1,0 +1,13 @@
+.example-header-image {
+    background-image: url('../../../../assets/exam.png');
+    background-size: cover;
+  }
+  .buttons {
+    width: 960px;
+    margin: 0 auto;}
+    
+        .action_btn {
+    width: 500px;
+    margin: 0 auto;
+  }
+  

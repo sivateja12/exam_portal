@@ -1,0 +1,53 @@
+<mat-card *ngIf="user">
+    <h1 style="margin-left:10px;">Your Profile</h1>
+   <!-- <mat-card-content> profile details </mat-card-content>-->
+   <!--{{user | json}}-->
+        
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+
+            <div class="container">
+
+                <div class="container text-center "style="margin-top:6px;">
+                    <img src="https://as2.ftcdn.net/v2/jpg/04/10/43/77/1000_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg" alt=""
+                    class="profile-image"
+                    >
+                    <h1 class="mt20">{{ user.fName }} {{ user.lname }}</h1>
+                </div>
+
+                <div class="row">
+                   <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr>
+                                <td>username</td>
+                                <td>{{user.username }}</td>
+                            </tr>
+                            <tr>
+                                <td>userid</td>
+                                <td>Exam{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td *ngIf="user.phone">phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>{{user.enabled? "ACTIVE":"NOTACTIVE"}}</td>
+                            </tr>
+
+                        </table>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button  mat-raised-button color="primary" style="margin-right:30px;margin-left:300px;">UPDATE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

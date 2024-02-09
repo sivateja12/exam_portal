@@ -1,0 +1,56 @@
+<!--h1>this is navbar</h1>-->
+
+<mat-toolbar color="primary">
+    <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>home</mat-icon>
+    </a>
+    <span>Exam Dashboard</span>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button class="example-icon " 
+    aria-label="Example icon-button with menu icon"style="margin-right: 30px;font-family:sans-serif;font-size:18px"
+    >Login
+     
+      
+</a>
+
+    <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button class="example-icon " 
+    aria-label="Example icon-button with menu icon"style="margin-right: 70px;font-family:sans-serif;font-size:18px;"
+    >
+    Register
+     
+      
+</a>
+
+
+
+<a
+  (click)="logout()"
+    *ngIf="isLoggedIn"
+    
+    mat-icon-button class="example-icon " 
+    aria-label="Example icon-button with menu icon"style="margin-right: 70px;font-family:sans-serif;font-size:18px;"
+    >
+  Logout
+     
+      
+</a>
+<a
+*ngIf="isLoggedIn && user"
+
+mat-icon-button 
+routerLink="/admin/profile"
+class="example-icon "
+
+aria-label="Example icon-button with menu icon"style="margin-right: 80px;margin-left:auto;font-family:sans-serif;font-size:18px;"
+>
+{{ user.username }}
+ 
+  
+</a>
+  </mat-toolbar>

@@ -1,0 +1,44 @@
+/* Adjust the styling as needed */
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-info {
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+}
+
+mat-divider {
+  margin-bottom: 10px;
+}
+/* Adjust the styling as needed */
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-info {
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+}
+
+mat-divider {
+  margin-bottom: 10px;
+}
+.description-container {
+  max-width:750px; /* Adjust the max-width as per your design */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
